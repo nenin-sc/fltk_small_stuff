@@ -1,0 +1,71 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0402
+header_name {.h}
+code_name {.cpp}
+decl {\#include "clsAppContext.h"} {private local
+}
+
+decl {\#include <FL/x.h>} {private global
+}
+
+Function {} {open
+} {
+  code {clsAppContext AppContext;
+Fl::scheme("gtk+");} {}
+  Fl_Window {} {
+    label {FLTK window}
+    user_data {&AppContext} user_data_type {clsAppContext*}
+    callback {v->cbClose();} open
+    xywh {663 213 481 244} type Double align 80
+    code0 {AppContext.Win(o);}
+    code1 {AppContext.init_windows();} visible
+  } {
+    Fl_Button {} {
+      label NewText
+      user_data {&AppContext} user_data_type {clsAppContext*}
+      callback {v->cbAdd();}
+      xywh {143 70 100 25}
+      code1 {AppContext.RegisterWg("btn_Test",o);}
+    }
+    Fl_Button {} {
+      label Close
+      user_data {&AppContext} user_data_type {clsAppContext*}
+      callback {v->cbClose();}
+      xywh {360 5 100 25}
+    }
+    Fl_Button {} {
+      label Clear
+      user_data {&AppContext} user_data_type {clsAppContext*}
+      callback {v->cbNew();}
+      xywh {38 70 100 25}
+      code1 {AppContext.RegisterWg("btn_New",o);}
+    }
+    Fl_Group {} {
+      label Test
+      user_data {&AppContext} user_data_type {clsAppContext*} open
+      xywh {93 105 135 30} labelsize 18 align 4
+      code0 {AppContext.RegisterWg("txsp_Test",o);}
+      class Fl_TextSpinner
+    } {}
+    Fl_Box {} {
+      user_data {&AppContext} user_data_type {clsAppContext*} selected
+      xywh {335 100 125 27} labelsize 18 align 5
+      code0 {AppContext.RegisterWg("rtl_YLax",o);}
+      code1 {o->text("Z.Im,Ω·cm²");}
+      code2 {o->angle(90);}
+      class Fl_Rotated_Label
+    }
+    Fl_Group {} {
+      label btn
+      user_data {&AppContext} user_data_type {clsAppContext*}
+      callback {v->cbBtOutTest();} open
+      xywh {79 11 135 30} color 76 labelsize 18 align 4
+      code0 {AppContext.RegisterWg("btout_Test",o);}
+      code1 {o->button().label("@fileopen");}
+      code2 {o->button().color(fl_rgb_color(204,230,255));}
+      code3 {o->output().color(fl_rgb_color(204,230,255));}
+      class Fl_ButtonOutput
+    } {}
+  }
+  code {w->icon((const void *)LoadIcon(fl_display, MAKEINTRESOURCE(501)));} {}
+}

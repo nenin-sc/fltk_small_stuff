@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="lib_fl_small_stuff" />
+		<Option pch_mode="2" />
+		<Option compiler="mingw-builds_gcc_142_compiler" />
+		<Option virtualFolders="demo/;lib/" />
+		<Build>
+			<Target title="Debug">
+				<Option output="lib64/_fl_small_stuff_db" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug64/" />
+				<Option type="2" />
+				<Option compiler="mingw-builds_gcc_142_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ggdb" />
+					<Add option="-Og" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="lib64/_fl_small_stuff" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release64/" />
+				<Option type="2" />
+				<Option compiler="mingw-builds_gcc_142_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-march=x86-64-v2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="test">
+				<Option output="lib_fl_small_stuff_db" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="mingw-builds_gcc_142_compiler" />
+				<Compiler>
+					<Add option="-ggdb" />
+					<Add option="-g" />
+					<Add directory="$(TARGET_COMPILER_DIR)FLTK/include" />
+					<Add directory="$(TARGET_COMPILER_DIR)user/include" />
+				</Compiler>
+				<Linker>
+					<Add library="fltk" />
+					<Add library="ole32" />
+					<Add library="uuid" />
+					<Add library="comctl32" />
+					<Add library="wsock32" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="oleaut32" />
+					<Add library="gdi32" />
+					<Add library="gdiplus" />
+					<Add library="winspool" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="libfmt.a" />
+					<Add library="lib_fltk_gcntx05.a" />
+					<Add directory="$(TARGET_COMPILER_DIR)FLTK/lib" />
+					<Add directory="$(TARGET_COMPILER_DIR)user/lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug32">
+				<Option output="lib32/_fl_small_stuff_db" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug32/" />
+				<Option type="2" />
+				<Option compiler="mingw-builds_gcc_142_32b_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ggdb" />
+					<Add option="-Og" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release32">
+				<Option output="lib32/_fl_small_stuff" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release32/" />
+				<Option type="2" />
+				<Option compiler="mingw-builds_gcc_142_32b_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-march=nocona" />
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-msse2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="$(TARGET_COMPILER_DIR)FLTK/include " />
+		</Compiler>
+		<Unit filename="cbAppContext.cpp">
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="clsAppContext.cpp">
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="clsAppContext.h">
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="main.fld">
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="main_ico.RC">
+			<Option compilerVar="CPP" />
+			<Option virtualFolder="demo/" />
+			<Option target="test" />
+		</Unit>
+		<Unit filename="src/Fl_ButtonOutput.cpp">
+			<Option virtualFolder="lib/" />
+		</Unit>
+		<Unit filename="src/Fl_TextSpinner.cpp">
+			<Option virtualFolder="lib/" />
+		</Unit>
+		<Unit filename="src/Fl_rotated_label.cpp">
+			<Option virtualFolder="lib/" />
+		</Unit>
+		<Unit filename="src/fl_nfc_util.cpp">
+			<Option virtualFolder="lib/" />
+		</Unit>
+		<Unit filename="src/fl_small_stuff.h">
+			<Option virtualFolder="lib/" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
