@@ -16,7 +16,7 @@ Fl::scheme("gtk+");} {}
     label {FLTK window}
     user_data {&AppContext} user_data_type {clsAppContext*}
     callback {v->cbClose();} open
-    xywh {663 213 481 244} type Double align 80
+    xywh {757 219 481 244} type Double align 80
     code0 {AppContext.Win(o);}
     code1 {AppContext.init_windows();} visible
   } {
@@ -31,7 +31,7 @@ Fl::scheme("gtk+");} {}
       label Close
       user_data {&AppContext} user_data_type {clsAppContext*}
       callback {v->cbClose();}
-      xywh {360 5 100 25}
+      xywh {366 208 100 25}
     }
     Fl_Button {} {
       label Clear
@@ -48,7 +48,7 @@ Fl::scheme("gtk+");} {}
       class Fl_TextSpinner
     } {}
     Fl_Box {} {
-      user_data {&AppContext} user_data_type {clsAppContext*} selected
+      user_data {&AppContext} user_data_type {clsAppContext*}
       xywh {335 100 125 27} labelsize 18 align 5
       code0 {AppContext.RegisterWg("rtl_YLax",o);}
       code1 {o->text("Z.Im,Ω·cm²");}
@@ -58,8 +58,8 @@ Fl::scheme("gtk+");} {}
     Fl_Group {} {
       label btn
       user_data {&AppContext} user_data_type {clsAppContext*}
-      callback {v->cbBtOutTest();} open
-      xywh {79 11 135 30} color 76 labelsize 18 align 4
+      callback {v->cbBtOutTest();} open selected
+      xywh {38 11 432 28} color 76 labelsize 18 align 4
       code0 {AppContext.RegisterWg("btout_Test",o);}
       code1 {o->button().label("@fileopen");}
       code2 {o->button().color(fl_rgb_color(204,230,255));}

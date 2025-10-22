@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
       o->callback((Fl_Callback*)cb_NewText, (void*)(&AppContext));
       AppContext.RegisterWg("btn_Test",o);
     } // Fl_Button* o
-    { Fl_Button* o = new Fl_Button(360, 5, 100, 25, "Close");
+    { Fl_Button* o = new Fl_Button(366, 208, 100, 25, "Close");
       o->callback((Fl_Callback*)cb_Close, (void*)(&AppContext));
     } // Fl_Button* o
     { Fl_Button* o = new Fl_Button(38, 70, 100, 25, "Clear");
@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
       o->text("Z.Im,Ω·cm²");
       o->angle(90);
     } // Fl_Rotated_Label* o
-    { Fl_ButtonOutput* o = new Fl_ButtonOutput(79, 11, 135, 30, "btn");
+    { Fl_ButtonOutput* o = new Fl_ButtonOutput(38, 11, 432, 28, "btn");
       o->box(FL_NO_BOX);
       o->color(FL_DARK_YELLOW);
       o->selection_color(FL_BACKGROUND_COLOR);
