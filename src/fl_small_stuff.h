@@ -83,13 +83,14 @@ class  Fl_TextSpinner : public Fl_Group {
 // NEW
 protected:
 #endif
+  int rbt_style;
   Fl_Output	output_;			// Output field for the text
   Fl_Repeat_Button_NDRG
 
 		up_button_,		// Up button
 		down_button_;		// Down button
   std::vector<std::string> svalues;
-  int rbt_style;
+
 private:
   static void sb_cb(Fl_Widget *w, Fl_TextSpinner *sb);
   void update() {
